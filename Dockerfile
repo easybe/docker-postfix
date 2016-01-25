@@ -35,8 +35,8 @@ RUN chmod u+x /install.sh \
  && /opt/editconf.py /etc/postfix/main.cf \
     smtpd_tls_security_level=may\
     smtpd_tls_auth_only=yes \
-    smtpd_tls_cert_file=/ssl/ssl_certificate.pem \
-    smtpd_tls_key_file=/ssl/ssl_private_key.pem \
+    smtpd_tls_cert_file=/etc/letsencrypt/live/synergy-village.org/fullchain.pem \
+    smtpd_tls_key_file=/etc/letsencrypt/live/synergy-village.org/privkey.pem \
     smtpd_tls_dh1024_param_file=/ssl/dh2048.pem \
     smtpd_tls_received_header=yes \
  && /opt/editconf.py /etc/postfix/main.cf \
